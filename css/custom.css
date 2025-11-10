@@ -66,4 +66,52 @@
   --color-info-bg: #676161;
   --color-infobox-1-bg: #cfcec6;
   --color-infobox-2-bg: #969995;
+
+  /* knapper på svg */
+  /* Containeren gør det muligt at positionere knapperne relativt til SVG’en */
+  #illustration .illustration {
+    position: relative;
+    max-width: 700px; /* justér efter dit layout */
+  }
+
+  /* Din SVG/billede */
+  #illustration .cow-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Knapper ovenpå – her placeret NEDERST i midten af SVG’en */
+  #illustration .svg-buttons {
+    position: absolute;
+    left: 50%;
+    bottom: 24px; /* flyt op/ned her */
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+  }
+
+  /* Knap-styles */
+  .info-btn {
+    border: 1.5px solid #1a1a1a;
+    background: #fff;
+    border-radius: 999px;
+    padding: 0.6rem 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  .info-btn.is-active {
+    background: #1a1a1a;
+    color: #fff;
+  }
+
+  /* Vis/skjul tekstbokse */
+  .info-box {
+    display: none;
+    margin-top: 0.5rem;
+  }
+  .info-box.is-active {
+    display: block;
+  }
 }

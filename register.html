@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/burger.css" />
     <link rel="stylesheet" href="css/cards.css" />
-    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/forms.css" />
     <link rel="icon" type="image/png" href="img/fav.png" />
     <title>Emergency Site</title>
   </head>
@@ -37,15 +37,89 @@
       <h1>INDBERET</h1>
       <section id="form-section">
         <article id="form-info">
-          <h2>Overskrift</h2>
-          <p>Tekst</p>
-        </article>
-        <form id="webform"></form>
-      </section>
-      <section id="form-summary">
-        <h2>Summary</h2>
-        <article>
-          <p class="placeholder">Opsummering</p>
+          <form id="webform">
+            <h2>Dine oplysninger</h2>
+            <fieldset>
+              <div class="field">
+                <label for="first">Fornavn *</label>
+                <input
+                  id="first"
+                  name="first"
+                  type="text"
+                  placeholder="Fornavn"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="last">Efternavn *</label>
+                <input
+                  id="last"
+                  name="last"
+                  type="text"
+                  placeholder="Efternavn"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="email">Email *</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="eksempel@eksempel.com"
+                  required
+                />
+              </div>
+            </fieldset>
+
+            <h2>Dine oplevelser</h2>
+            <fieldset>
+              <div class="field">
+                <label for="region">Region *</label>
+                <select id="region" name="region" required>
+                  <option value="" hidden>Vælg region…</option>
+                  <option>Region Hovedstaden</option>
+                  <option>Region Sjælland</option>
+                  <option>Region Midtjylland</option>
+                  <option>Region Syddanmark</option>
+                  <option>Region Nordjylland</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <span>Havde koen laserøjne? *</span>
+                <div class="radios">
+                  <label
+                    ><input type="radio" name="laser" value="ja" required />
+                    Ja</label
+                  >
+                  <label
+                    ><input type="radio" name="laser" value="nej" /> Nej</label
+                  >
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="desc">Beskrivelse *</label>
+                <textarea
+                  id="desc"
+                  name="desc"
+                  placeholder="Beskrivelse af dine observationer"
+                  required
+                ></textarea>
+              </div>
+            </fieldset>
+
+            <div class="confirm">
+              <input id="truth" name="truth" type="checkbox" required />
+              <label for="truth"
+                >Jeg erklærer på tro og love, at de indtastede oplysninger er
+                korrekte. *</label
+              >
+            </div>
+
+            <button type="submit">Send</button>
+          </form>
         </article>
       </section>
     </main>
