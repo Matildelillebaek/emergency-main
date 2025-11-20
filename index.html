@@ -18,10 +18,15 @@
   </head>
   <body id="frontpage">
     <header>
+       
       <nav>
         <div id="logotype-wrapper" class="logo">
           <a href="index.html"> LOGO-TYPE </a>
         </div>
+        <nav class="Darkmode">
+       
+         
+      
         <ul class="menu">
           <li><a class="menuItem" href="instruction.html">Nærkontakt </a></li>
           <li><a class="menuItem" href="register.html">Indberet</a></li>
@@ -33,60 +38,95 @@
         </button>
       </nav>
     </header>
+    <button id="toggle">light/dark mode</button>
     <section id="main-disclamer">
       <div id="main-disclamer-content">
-        <img src="warning" alt="ICON" />
+        
         <div>
-          <h1>OVERSKRIFT</h1>
-          <p class="sub">Underrubrik</p>
+          <h1>Danmark er invaderet!</h1>
+          <p class="sub">Her er statens officielle guidelines</p>
         </div>
       </div>
     </section>
     <main>
-      <section id="daily">
-        <article class="daily_card">
-          <img src="" alt="teaser_img" />
-          <div class="daily_text">
-            <h2>Teaser</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-              magnam ducimus ea, sed minima asperiores.
-            </p>
-            <a href="" class="cta_btn">Se mere</a>
-          </div>
-        </article>
-        <article class="daily_card">
-          <img src="" alt="teaser_img" />
-          <div class="daily_text">
-            <h2>Teaser</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-              magnam ducimus ea, sed minima asperiores.
-            </p>
-            <a href="" class="cta_btn">Se mere</a>
-          </div>
-        </article>
+      <section class="faq-section">
+        <section id="daily">
+          <article class="daily_card">
+            <img src="img/svg/ko.svg" alt="ko" />
+            <div class="daily_text">
+              <h2>Nærkontakt</h2>
+              <p>
+                Tæt møde med en laser-ko? Sådan overlever du, hvis øjnene begynder at gløde grønt — eller mælken i køleskabet pludselig lyser.
+              </p>
+              <!-- accordion-->
+              <details class="acc">
+                <summary class="cta_btn">Se mere</summary>
+
+                <div class="acc-content">
+                  Når en ko retter sine neon-grønne laserøjne mod dig, kan du blive selvlysende på få sekunder. Det gør dig synlig for hele flokken, også gennem mørke og tåge. Hold altid afstand, undgå øjenkontakt, og gem dig.
+                </div>
+              </details>
+            </div>
+          </article>
+          <article class="daily_card">
+            <img src="/img/radioaktiv.png" alt="radioaktivitet" />
+            <div class="daily_text">
+              <h2>Indberet</h2>
+              <p>
+               Har du set en laser-ko, radioaktiv glød eller hørt et mystisk MOO fra himlen? Indberet det her — hver observation hjælper med at kortlægge deres bevægelser.
+              </p>
+              <!-- accordion-->
+              <details class="acc">
+                <summary class="cta_btn">Se mere</summary>
+                <div class="acc-content">
+                 Dine observationer hjælper os med at spore ko-flokkens rute og registrere farlige radioaktive zoner. Selv små detaljer kan gøre en forskel.
+                </div>
+              </details>
+            </div>
+          </article>
+        </section>
       </section>
       <section id="breaking">
         <article class="news_card">
-          <h3>Nyhed</h3>
-          <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-          <img src="" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
+          <h3>Ko-lyd påvirker dyr og kæledyr</h3>
+          <p>Dyrlæger melder om usædvanlig adfærd hos hunde og katte efter kraftige ko-lyde.</p>
+          <img src="img/kaeledyr.png" alt="kaeledyr" />
+          <button class="cta_btn" popovertarget="nyhed1">Læs mere</button>
         </article>
         <article class="news_card">
-          <h3>Nyhed</h3>
-          <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-          <img src="" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
+          <h3>Grøn tåge rammer flere bydele</h3>
+          <p>En ukendt grøn tåge har lagt sig over flere områder. Borgerne frarådes at gå udenfor uden beskyttelse.</p>
+          <img src="img/taageby.png" alt="taageby" />
+          <button class="cta_btn" popovertarget="nyhed2">Læs mere</button>
         </article>
         <article class="news_card">
-          <h3>Nyhed</h3>
-          <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-          <img src="" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
+          <h3>Mærkelige fodspor fundet i hele landet</h3>
+          <p>Store, dybe og uidentificerede fodspor er dukket op på marker og legepladser over hele landet.</p>
+          <img src="img/forspor.png" alt="fodspor" />
+          <button class="cta_btn" popovertarget="nyhed3">Læs mere</button>
         </article>
       </section>
+      <!-- POPOVERS -->
+      <div id="nyhed1" popover>
+        <h2>Ko-lyd påvirker dyr og kæledyr</h2>
+        <p>Flere dyrlæger rapporterer om dyr, der reagerer voldsomt på koernes ultralyde. Hunde gemmer sig, katte stivner, og nogle dyr begynder at stirre mod himlen i flere minutter ad gangen.
+Det menes, at koernes “kommunikationsfrekvenser” påvirker dyr langt stærkere end mennesker. Hvis dit kæledyr viser tegn på angst, anbefales det at holde dem indendørs og afskærme vinduer mod lysglimt og lyde.</p>
+        <button popovertarget="nyhed1" popovertargetaction="hide">Luk</button>
+      </div>
+
+      <div id="nyhed2" popover>
+        <h2>Grøn tåge rammer flere bydele</h2>
+        <p>Tidligt i morges kunne beboere i flere bydele rapportere om en tæt, grøn tåge med svag glød. Meteorologerne afviser, at tågen er naturligt forekommende, og beredskabet mistænker, at alien-køerne udleder den, når de bevæger sig i flok.
+Tågen kan påvirke synet og give en midlertidig svimmelhed. Flere borgere fortæller, at de hørte ko-lyde forstærket gennem tågen. Myndighederne anbefaler at blive indendørs, lukke vinduer og undgå at indånde tågen til dens oprindelse er klarlagt.</p>
+        <button popovertarget="nyhed2" popovertargetaction="hide">Luk</button>
+      </div>
+
+      <div id="nyhed3" popover>
+        <h2>Mærkelige fodspor fundet i hele landet</h2>
+        <p>Tusindvis af borgere deler billeder af mærkelige spor, der ikke ligner aftryk fra normale køer. Sporene er større, mere kantede og enkelte steder svagt glødende. Nogle af dem danner lange, parallelle rækker, som om en flok har marcheret systematisk gennem området.
+Eksperter advarer om, at disse spor kan indikere, at alien-køerne har ændret adfærd — muligvis forbereder de sig på noget. Beredskabet opfordrer til, at alle nye spor dokumenteres og indberettes for at fastlægge flokkens bevægelsesmønstre.</p>
+        <button popovertarget="nyhed3" popovertargetaction="hide">Luk</button>
+      </div>
     </main>
 
     <footer>
@@ -113,9 +153,11 @@
           <li><a href="">link</a></li>
           <li><a href="">link</a></li>
         </ul>
+    
       </nav>
+      
     </footer>
     <script src="js/burger.js"></script>
-    <!-- <script src="js/main.js"></script> -->
+    <script src="js/main.js"></script> 
   </body>
 </html>
