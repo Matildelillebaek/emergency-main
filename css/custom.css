@@ -1,20 +1,20 @@
 :root {
   /* Colours */
-  --color-bg: #fceb94; /* page background /*
+  --color-bg: light-dark(#fceb94, #707070); /* page background /*
 
   /* Header */
-  --color-head-bg: #ff4b00;
+  --color-head-bg: light-dark(#ff4b00, #ff4b00);
 
   /* Logotype */
-  --color-logotype-bg: #000;
-  --color-text-logotype: #fffae2;
+  --color-logotype-bg: light-dark (#000, #fffae2);
+  --color-text-logotype: light-dark (#fffae2, #494949);
   --font-logotype-size: 2rem;
 
   /* Global menu */
   --color-menu-bg: #6f90ef;
   /* Links */
-  --color-link-bg: #fffae2;
-  --color-link-hover: #fff; /* used */
+  --color-link-bg: light-dark (#fffae2, #494949);
+  --color-link-hover: light-dark(#fff, #272727); /* used */
   --color-link-active: #99958f; /* used */
   --border-radius-links: 1px;
 
@@ -43,7 +43,7 @@
   --color-news-bg: #fffae2;
   --color-news-bg-inverted: #dbe2f5;
   --color-cta-newscard-bg: #ffa680;
-  --color-cta-newscard-bg-inverted: #6f90eb;
+  --color-cta-newscard-bg-inverted: light-dark(#6f90eb, #d9e3ff);
 
   /* Fonts */
   --font-family-sans: "Rubik" ui-sans-serif;
@@ -66,52 +66,65 @@
   --color-info-bg: #676161;
   --color-infobox-1-bg: #cfcec6;
   --color-infobox-2-bg: #969995;
+}
+/*knap til darkmode*/
+button {
+  border: none;
+  background-color: canvas;
+  color: canvastext;
+  border: 1px solid currentColor;
+  text-box: cap alphabetic;
+  padding: 1cap;
+  border-radius: 5px;
+  display: block;
+  cursor: pointer;
+  margin-block: 1.5rlh;
+}
 
-  /* knapper på svg */
-  /* Containeren gør det muligt at positionere knapperne relativt til SVG’en */
-  #illustration .illustration {
-    position: relative;
-    max-width: 700px; /* justér efter dit layout */
-  }
+/* knapper på svg */
+/* Containeren gør det muligt at positionere knapperne relativt til SVG’en */
+#illustration .illustration {
+  position: relative;
+  max-width: 700px; /* justér efter dit layout */
+}
 
-  /* Din SVG/billede */
-  #illustration .cow-svg {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
+/* Din SVG/billede */
+#illustration .cow-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
-  /* Knapper ovenpå – her placeret NEDERST i midten af SVG’en */
-  #illustration .svg-buttons {
-    position: absolute;
-    left: 50%;
-    bottom: 24px; /* flyt op/ned her */
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-  }
+/* Knapper ovenpå – her placeret NEDERST i midten af SVG’en */
+#illustration .svg-buttons {
+  position: absolute;
+  left: 50%;
+  bottom: 24px; /* flyt op/ned her */
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
 
-  /* Knap-styles */
-  .info-btn {
-    border: 1.5px solid #1a1a1a;
-    background: #fff;
-    border-radius: 999px;
-    padding: 0.6rem 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
-  .info-btn.is-active {
-    background: #1a1a1a;
-    color: #fff;
-  }
+/* Knap-styles */
+.info-btn {
+  border: 1.5px solid #1a1a1a;
+  background: #fff;
+  border-radius: 999px;
+  padding: 0.6rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.info-btn.is-active {
+  background: #1a1a1a;
+  color: #fff;
+}
 
-  /* Vis/skjul tekstbokse */
-  .info-box {
-    display: none;
-    margin-top: 0.5rem;
-  }
-  .info-box.is-active {
-    display: block;
-  }
+/* Vis/skjul tekstbokse */
+.info-box {
+  display: none;
+  margin-top: 0.5rem;
+}
+.info-box.is-active {
+  display: block;
 }
